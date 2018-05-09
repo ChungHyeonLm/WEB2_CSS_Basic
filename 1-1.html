@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> WEB1 - HTML </title>
+  <meta charset="utf-8">
+
+  <style>
+  body {
+    margin: 0;
+  }
+
+  /* id의 이름은 중복 되어서는 안된다.
+   즉, a의 Tag에서 예외적인면을 정의한다라  고 생각 하면 된다.*/
+
+  /* <a>태그 안에서 class.saw의 color도 있고 id.active의 color도 있다.
+     우선순위가 높은 순서 : Tag -> class -> id 이다.*/
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* a teg 전체를 color를 red로 바꾸게 된다.
+                text-decoration:none은 밑줄이 없어진다.*/
+
+  h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px gray solid;
+    margin: 0;
+    padding: 20px;
+  }
+
+  ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+  }
+
+
+  #grid  {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    /* columns -> 열(가로) */
+
+  }
+  /* id의 grid라 하는 아래 ol태그 (정확히 명시하는 것이 좋다.)*/
+  #grid ol {
+        padding-left:33px;
+  }
+  /*#article만 하여도 되지만 의미있게 하기 위해 #grid 붙여 주어
+   "grid 아래 article 있다" 라는 의미 */
+  #grid #article {
+    padding-left : 25px;
+  }
+
+  /* screen width < 800px  -> display가 grid 였던 것이 block으로 바뀐다.*/
+  @media(max-width:800px) {
+    #grid  {
+      display: block;
+    }
+    ol {
+      border-right: none;
+    }
+
+    h1 {
+        border-bottom :none;
+    }
+
+  }
+
+  </style>
+</head>
+
+<body>
+  <h1><a href = "index-1.html">WEB</a></h1>
+
+  <div id="grid">
+    <ol>
+      <li><a href="1-1.html">HTML</a></li>
+      <li><a href="2-1.html">CSS</a></li>
+      <li><a href="3-1.html">JavaScript</a></li>
+    </ol>
+
+    <div id="article">
+      <h2>HTML</h2>
+      <p><a href="https://www.w3.org/TR/html51/" target="_blank" title="html5 speicification" style="color : red; text-decoration:underline">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.Web browsers receive HTML
+        documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+
+        <img src="coding.jpg" width="90%" height="80%" />
+        <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page.It provides a means to create structured documents by denoting structural semantics
+        for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.</p>
+      </div>
+    </div>
+</body>
+
+</html>

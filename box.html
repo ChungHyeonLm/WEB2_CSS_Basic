@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    h1{
+      /*
+      block lever element(=tag) : 화면 전체를 쓰는 Tag 가리키는 말
+        border는 테두리를 말한다.
+        border - width는 두께, style는 선의 종류(solid : 단선)
+      */
+      border-width:5px;
+      border-color:red;
+      border-style: solid;
+      /* display: inline;  <-- h1은 원래 BLE인데 IE로 바꾸게 해주는 명령어.
+      */
+      /* display: none;  <-- h1의 태그를 코드상이 아닌 화면에 없애고 싶을 때. */
+    }
+
+    /*
+    inline element(=tag) : 자기 자신의 컨텐츠만큼의 Tag 가리키는 말
+    */
+  a{
+      border-width:5px;
+      border-color:red;
+      border-style: solid;
+      /* display: block; <-- <a>은 원래 IE인데 BLE로 바꾸게 해주는 명령어. */
+    }
+    /* h1과 a를 압축 한 것이 아래의 코드. */
+    h1, a{
+        border-width:5px;
+        border-color:red;
+        border-style: solid;
+        /* display: block; <-- <a>은 원래 IE인데 BLE로 바꾸게 해주는 명령어. */
+        /*
+        border 명령어 축소 => border: 5px solid red;
+        */
+      }
+
+  </style>
+  <title>
+  </title>
+</head>
+
+<body>
+  <h1>CSS이란 무엇인가?</h1>
+</body>
+
+</html>

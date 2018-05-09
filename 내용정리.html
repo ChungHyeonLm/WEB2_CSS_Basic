@@ -1,0 +1,58 @@
+<!-- head는 타이틀를 알려주는 약속; body는 목차, 본문내용; html, !doctype html은 최상위층에 붙는다라고 생각. -->
+<!doctype html>
+<html>
+<head>
+  <title> WEB1 - html </title>
+  <!--<title> : 본문의 제목.
+  ====> 사용자에게 명시적으로 알려줄수 있는 것뿐만 아니라 검색 엔진 같은 엔진들은  책 표지(책 제목)와 동일한것과 같은 것처럼 사용해야지 검색 시 정보를 찾을 수 있다. 그냥 사용 안 하면 손해라고 생각해라.  -->
+  <meta charset="utf-8">
+  <!--utf-8로 문서를 읽어라라고 브라우저에 말을 해주는 거. 사용 해주면 홈페이지에 한글이 출력이 된다.  -->
+</head>
+
+<ul>
+  <li>1. HTML</li>
+  <li>2. CSS</li>
+  <li>3. JavaScript</li>
+</ul>
+
+  <body>
+    <h1><a href = "index.html" target="_blank" title="WEB speicification">WEB</a></h1>
+  <ol>
+    <li><a href = "1.html"target="_blank" title="1. html speicification">HTML</a></li>
+    <li><a href = "2.html"target="_blank" title="2. html speicification">CSS</a></li>
+    <li><a href = "3.html"target="_blank" title="3. html speicification">JavaScript</a></li>
+  </ol>
+  <!-- ol(ordered List), ul(Unordered List)을 사용 할 시 자동 번호를 매겨준다.  -->
+<!-- <a href="주소" target="_blank" title ="html5 speicification"> : <a> ~ </a> 구간의 글씨는 링크가 걸린다; target="_blank"는 새창으로 열리게 한다.;
+ title은 링크걸린 글씨 위에 마우스를 올릴 시 참조하는 내용이 어떠한것인지 알 수 있게 해준다.-->
+    <h2>HTML이란 무엇인가?</h2>
+    <p><a href="https://www.w3.org/TR/html51/" target="_blank" title="html5 speicification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages.
+    HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+    <img src="coding.jpg" width="90%" height="80%"/>
+    <!-- <img src="coding.jpg" width="90%"/> :: 속성(Attribute) 라고한다. -->
+
+    <p>HTML elements are the building blocks of HTML pages.
+    With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page.It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.
+    HTML elements are delineated by tags, written using angle brackets.</p>
+  </body>
+</html>
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4>This is heading 4</h4>
+<h5>This is heading 5</h5>
+<h6>This is heading 6</h6>
+
+
+<!--
+    <TAG>
+     - 다른 문자랑 다르게 진하게 하는 방법 => <strong> ~ </strong>
+     - 밑줄 긋기 => <u> ~ </u>
+     - <h1~6> ~ </h1~6> => 숫자가 클 수록 글씨는 작아지고, 연해진다. 자동 줄 바꿈.
+     - <br /> => 줄 바꿈.
+     - <p> ~ </p> => 단락지어 주기.
+     - <img src="이미지 주소" width="정수 or %"/> => 이미지 넣기. width => 이미지 크기.
+     - <li> ~ </li> => 목차에 유용하게 사용.
+    - <ui> ~ </ui> => li의 어디에서 어디까지 구분을 지어 주는 부모함수라고 생각하면 된다. 일종의 단락짓는 거와 동일.
+    **** li와 ui는 항상 붙어 다닌다.
+  -->

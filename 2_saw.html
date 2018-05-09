@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> WEB1 - CSS </title>
+  <meta charset="utf-8">
+  <style>
+
+    body {
+      margin: 0;
+    }
+
+    /* id의 이름은 중복 되어서는 안된다.
+     즉, a의 Tag에서 예외적인면을 정의한다라  고 생각 하면 된다.*/
+    #active {
+      color: red;
+    }
+
+    .saw {
+      color: gray;
+    }
+
+    /* <a>태그 안에서 class.saw의 color도 있고 id.active의 color도 있다.
+       우선순위가 높은 순서 : Tag -> class -> id 이다.*/
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* a teg 전체를 color를 red로 바꾸게 된다.
+                  text-decoration:none은 밑줄이 없어진다.*/
+
+    h1 {
+      font-size: 45px;
+      text-align: center;
+      border-bottom: 1px gray solid;
+      margin: 0;
+      padding: 20px;
+    }
+
+    ol {
+      border-right: 1px solid gray;
+      width: 100px;
+      margin: 0;
+      padding: 20px;
+      padding-left:33px;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      /* columns -> 열(가로) */
+    }
+    #article {
+      padding-left : 25px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1><a href = "index.html">WEB</a></h1>
+
+  <div id="grid">
+      <ol>
+        <li> <a href="1.html" class="saw">HTML</a> </li>
+        <li> <a href="2.html" class="saw" id="active">CSS</a> </li>
+        <li> <a href="3.html">JavaScript</a> </li>
+        <!--class : 그룹 지정.  -->
+      </ol>
+
+    <div id="article">
+      <h2>CSS</h2>
+      <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.
+      </p><p> Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media.
+        Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>

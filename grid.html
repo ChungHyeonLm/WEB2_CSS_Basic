@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+    #grid {
+      border: 5px solid pink;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+    }
+      div {
+        border: 5px solid gray;
+      }
+    </style>
+
+  </head>
+  <body>
+
+  <div id="grid">
+    <div>NAVIGATION</div>
+    <div>ARTICLE</div>
+  </div>
+
+  </body>
+</html>
+
+<!--
+ - div => 의미 없고 기능도 없는 그냥 디자인용도로만 사용하는
+          태그, BLE이기때문에 화면 전체를 사용 즉, 자동 줄 바꿈이 일어난다.
+ - span => div랑 같은 태그이지만 BLE이 아닌 IE이다.
+ - <div> ~ </div> 사용 하는 이유는 NAVIGATION과 ARTICLE를 나란히 배치하고 싶으면 감싸는 부모 태그가 필요하므로 사용.
+ - display:grid 정의 후 grid-template-columns 사용 하면 grid를 columns으로 사용하겠다라고 정의.
+- grid-template-columns: [NAVIGATION] [ARTICLE] 이므로 값을 px 또는 정수fr을 준다. px로 하게 되면 화면상 고정이 되며, 정수fr이라고 하면 화면을 정수값만큼 나누고 화면 전체를 사용 하므로 줄이면 줄여지고 늘리면 늘려진다.
+ ex) grid-template-columns:2fr 1fr
+     화면을 세등분이라고 하면 2:1 비율로 NAVIGATION과 ARTICLE 나누고 화면 전체를 사용하므로 줄이면 줄여들고 늘리면 늘려진다.
+  -->
